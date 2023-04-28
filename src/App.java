@@ -52,7 +52,6 @@ public class App {
     }
 
     public static void listStudent() {
-        System.out.println("##### List of students");
         for (Student student : studentList) {
             System.out.println("Student ID " + student.id + " age." + student.age + "name:"+student.name);
             return;
