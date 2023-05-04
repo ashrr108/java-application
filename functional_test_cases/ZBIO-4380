@@ -1,0 +1,43 @@
+Functional Test Cases:
+
+1. Test Case: Verify Spring Boot application start
+   - Input: Run the Spring Boot application
+   - Expected Output: Application starts successfully and is running on the specified port
+
+2. Test Case: Verify the API endpoint for adding a new item
+   - Input: Send a POST request with valid item data to the API endpoint
+   - Expected Output: New item is added to the database and a success response is returned with the created item's details
+
+3. Test Case: Verify the API endpoint for fetching all items
+   - Input: Send a GET request to the API endpoint for fetching all items
+   - Expected Output: All items in the database are returned in the response
+
+4. Test Case: Verify the API endpoint for fetching a single item by ID
+   - Input: Send a GET request with a valid item ID to the API endpoint for fetching a single item
+   - Expected Output: The item with the specified ID is returned in the response
+
+5. Test Case: Verify the API endpoint for updating an existing item
+   - Input: Send a PUT request with valid item data and item ID to the API endpoint
+   - Expected Output: The item with the specified ID is updated in the database and a success response is returned with the updated item's details
+
+6. Test Case: Verify the API endpoint for deleting an item by ID
+   - Input: Send a DELETE request with a valid item ID to the API endpoint
+   - Expected Output: The item with the specified ID is deleted from the database and a success response is returned
+
+Non-Functional Test Cases:
+
+1. Test Case: Verify the response time of API endpoints
+   - Input: Send requests to various API endpoints
+   - Expected Output: Response time should be within acceptable limits (e.g. less than 2 seconds)
+
+2. Test Case: Verify the application's ability to handle concurrent requests
+   - Input: Send multiple concurrent requests to the API endpoints
+   - Expected Output: The application should be able to handle all requests without any errors or significant performance degradation
+
+3. Test Case: Verify the application's security against common vulnerabilities
+   - Input: Perform security testing using tools like OWASP ZAP or other relevant security testing techniques
+   - Expected Output: The application should not have any critical security vulnerabilities
+
+4. Test Case: Verify the application's error handling and logging
+   - Input: Trigger errors or exceptions by sending invalid requests or data to the API endpoints
+   - Expected Output: The application should return appropriate error messages and log the errors for further analysis

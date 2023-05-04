@@ -1,0 +1,71 @@
+Description: The given Java code is an application that allows users to create, read, update, and delete (CRUD) records in a database. The application also has a search functionality that allows users to search for records based on different criteria such as name, date, and status.
+
+Functional Test Cases:
+
+1. Create Record
+    - Input: Name: "John Doe", Date: "2022-01-01", Status: "Active"
+    - Expected Output: Record created successfully with the given details
+    - Edge Cases:
+        - Empty name field
+        - Invalid date format
+        - Invalid status
+
+2. Read Record
+    - Input: Record ID: 1
+    - Expected Output: Display record details with ID 1
+    - Edge Cases:
+        - Non-existing record ID
+        - Invalid input format for record ID
+
+3. Update Record
+    - Input: Record ID: 1, New Name: "Jane Doe", New Date: "2022-02-01", New Status: "Inactive"
+    - Expected Output: Record with ID 1 updated successfully with the new details
+    - Edge Cases:
+        - Non-existing record ID
+        - Invalid input format for record ID
+        - Empty name field
+        - Invalid date format
+        - Invalid status
+
+4. Delete Record
+    - Input: Record ID: 1
+    - Expected Output: Record with ID 1 deleted successfully
+    - Edge Cases:
+        - Non-existing record ID
+        - Invalid input format for record ID
+
+5. Search Record by Name
+    - Input: Name: "John Doe"
+    - Expected Output: Display all records with the name "John Doe"
+    - Edge Cases:
+        - Empty name field
+        - No records found with the given name
+
+6. Search Record by Date
+    - Input: Date: "2022-01-01"
+    - Expected Output: Display all records with the date "2022-01-01"
+    - Edge Cases:
+        - Invalid date format
+        - No records found with the given date
+
+7. Search Record by Status
+    - Input: Status: "Active"
+    - Expected Output: Display all records with the status "Active"
+    - Edge Cases:
+        - Invalid status
+        - No records found with the given status
+
+Non-Functional Test Cases:
+
+1. Performance
+    - Test the application's response time when searching for records
+    - Test the application's response time when creating, updating, and deleting records
+
+2. Usability
+    - Test the application's user interface for ease of use and understandability
+
+3. Security
+    - Test the application for any potential security vulnerabilities, such as SQL injection or unauthorized access to records
+
+4. Scalability
+    - Test the application's ability to handle a large number of records and concurrent users
