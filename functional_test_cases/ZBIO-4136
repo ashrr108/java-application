@@ -1,0 +1,57 @@
+Description:
+A Java application that allows users to manage their personal tasks. Users can create tasks, set deadlines, mark tasks as complete, and delete tasks. The application also displays a list of all tasks, sorted by their deadlines.
+
+Functional Test Cases:
+
+1. Create Task
+   - Input: Task Name, Deadline
+   - Expected Output: Task created successfully, Task added to the list
+   - Edge Cases:
+       - Empty Task Name
+       - Invalid Deadline format
+
+2. Set Deadline
+   - Input: Task ID, New Deadline
+   - Expected Output: Task deadline updated
+   - Edge Cases:
+       - Invalid Task ID
+       - Invalid Deadline format
+
+3. Mark Task as Complete
+   - Input: Task ID
+   - Expected Output: Task marked as complete, Task status updated
+   - Edge Cases:
+       - Invalid Task ID
+
+4. Delete Task
+   - Input: Task ID
+   - Expected Output: Task deleted, Task removed from the list
+   - Edge Cases:
+       - Invalid Task ID
+
+5. Display Tasks
+   - Input: None
+   - Expected Output: List of tasks displayed, sorted by deadline
+   - Edge Cases:
+       - No tasks available
+
+Non-Functional Test Cases:
+
+1. Performance
+   - Test the application's response time when handling a large number of tasks
+   - Test the application's ability to handle multiple user requests concurrently
+
+2. Usability
+   - Test the user interface for ease of use and understandability
+   - Test the application's error messages for clarity and helpfulness
+
+3. Security
+   - Test the application's ability to prevent unauthorized access to user data
+   - Test the application's ability to prevent SQL injection and other common security vulnerabilities
+
+4. Compatibility
+   - Test the application's compatibility with different operating systems and Java versions
+   - Test the application's compatibility with different screen resolutions and devices
+
+5. Scalability
+   - Test the application's ability to handle an increasing number of tasks and users without compromising performance or functionality

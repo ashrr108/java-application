@@ -1,11 +1,14 @@
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
@@ -13,11 +16,6 @@ public class MyClassTest {
 
     @InjectMocks
     private MyClass myClass;
-
-    @BeforeEach
-    public void setUp() {
-        myClass = new MyClass();
-    }
 
     @Test
     public void testSetId_success() {
@@ -37,16 +35,12 @@ public class MyClassTest {
         // Arrange
         int invalidId = -1;
 
-        // Act
-        myClass.setId(invalidId);
-        int actualId = myClass.getId();
-
-        // Assert
-        assertEquals(0, actualId, "The ID should not be set to a negative value.");
+        // Act & Assert
+        assertThrows(IllegalArgumentException.class, () -> myClass.setId(invalidId), "Setting a negative ID should throw an exception.");
     }
 
     @Test
-    public void testSetId_maxIntegerValue() {
+    public void testSetId_maxValue() {
         // Arrange
         int maxId = Integer.MAX_VALUE;
 
@@ -55,19 +49,16 @@ public class MyClassTest {
         int actualId = myClass.getId();
 
         // Assert
-        assertEquals(maxId, actualId, "The ID should be set to the maximum integer value.");
+        assertEquals(maxId, actualId, "The ID should be set correctly when using the maximum integer value.");
     }
 
     @Test
-    public void testSetId_minIntegerValue() {
+    public void testSetId_minValue() {
         // Arrange
         int minId = Integer.MIN_VALUE;
 
-        // Act
-        myClass.setId(minId);
-        int actualId = myClass.getId();
-
-        // Assert
-        assertEquals(0, actualId, "The ID should not be set to the minimum integer value.");
+        // Act & Assert
+        assertThrows(IllegalArgumentException.class, () -> myClass.setId(minId), "Setting the minimum integer value as ID should throw an exception.");
     }
 }
+

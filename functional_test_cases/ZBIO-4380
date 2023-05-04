@@ -1,0 +1,47 @@
+**Functional Test Cases:**
+
+1. Test Case: Verify the application starts successfully
+   - Input: Start the application
+   - Expected Output: Application starts without any errors and displays the appropriate welcome message
+
+2. Test Case: Verify the REST API endpoint for retrieving all data
+   - Input: Send a GET request to /api/data
+   - Expected Output: A list of all data objects is returned with a 200 OK status
+
+3. Test Case: Verify the REST API endpoint for retrieving data by ID
+   - Input: Send a GET request to /api/data/{id} with a valid ID
+   - Expected Output: The data object with the specified ID is returned with a 200 OK status
+   - Edge Case: Send a GET request with an invalid ID, expect a 404 Not Found status
+
+4. Test Case: Verify the REST API endpoint for creating new data
+   - Input: Send a POST request to /api/data with a valid data object
+   - Expected Output: The new data object is created and returned with a 201 Created status
+   - Edge Case: Send a POST request with an invalid data object, expect a 400 Bad Request status
+
+5. Test Case: Verify the REST API endpoint for updating existing data
+   - Input: Send a PUT request to /api/data/{id} with a valid ID and updated data object
+   - Expected Output: The data object is updated and returned with a 200 OK status
+   - Edge Case: Send a PUT request with an invalid ID or data object, expect a 400 Bad Request status
+
+6. Test Case: Verify the REST API endpoint for deleting data by ID
+   - Input: Send a DELETE request to /api/data/{id} with a valid ID
+   - Expected Output: The data object with the specified ID is deleted and a 200 OK status is returned
+   - Edge Case: Send a DELETE request with an invalid ID, expect a 404 Not Found status
+
+**Non-Functional Test Cases:**
+
+1. Test Case: Verify the application's response time for each API endpoint
+   - Input: Send requests to each API endpoint
+   - Expected Output: The response time for each endpoint should be within the acceptable range as per the performance requirements
+
+2. Test Case: Verify the application's scalability under high load
+   - Input: Simulate high load conditions on the application
+   - Expected Output: The application should be able to handle the high load without significant performance degradation
+
+3. Test Case: Verify the application's security against common vulnerabilities
+   - Input: Perform security testing using tools like OWASP ZAP or similar
+   - Expected Output: The application should not have any critical security vulnerabilities
+
+4. Test Case: Verify the application's error handling and logging
+   - Input: Trigger errors by sending invalid requests or causing exceptions
+   - Expected Output: The application should log the errors and return meaningful error messages to the client
