@@ -1,0 +1,50 @@
+Description: The given Java code is a simple calculator application that allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The application takes input in the form of two numbers and an operator, and returns the result of the operation.
+
+Functional Test Cases:
+
+1. Test Case: Addition
+   - Input: Number1 = 5, Number2 = 3, Operator = "+"
+   - Expected Output: 8
+   - Edge Cases:
+     - Adding two maximum integer values
+     - Adding two minimum integer values
+     - Adding a positive and a negative integer
+
+2. Test Case: Subtraction
+   - Input: Number1 = 7, Number2 = 2, Operator = "-"
+   - Expected Output: 5
+   - Edge Cases:
+     - Subtracting two maximum integer values
+     - Subtracting two minimum integer values
+     - Subtracting a positive integer from a negative integer
+
+3. Test Case: Multiplication
+   - Input: Number1 = 4, Number2 = 3, Operator = "*"
+   - Expected Output: 12
+   - Edge Cases:
+     - Multiplying two maximum integer values
+     - Multiplying two minimum integer values
+     - Multiplying a positive and a negative integer
+
+4. Test Case: Division
+   - Input: Number1 = 9, Number2 = 3, Operator = "/"
+   - Expected Output: 3
+   - Edge Cases:
+     - Dividing two maximum integer values
+     - Dividing two minimum integer values
+     - Dividing a positive integer by a negative integer
+     - Dividing by zero (should return an error message)
+
+Non-Functional Test Cases:
+
+1. Test Case: Performance
+   - Measure the time taken to perform each arithmetic operation and ensure it is within acceptable limits.
+
+2. Test Case: Usability
+   - Ensure the user interface is simple and easy to understand, with clear instructions on how to input values and operators.
+
+3. Test Case: Error Handling
+   - Ensure the application provides meaningful error messages when incorrect input values or operators are entered.
+
+4. Test Case: Compatibility
+   - Ensure the application runs smoothly on different operating systems and Java versions.
